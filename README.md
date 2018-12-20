@@ -32,4 +32,26 @@
     public int value;
   }
  </code>
-1) 이진트리
+#### 이진트리
+- 보통 '트리'라 하면, 이진트리라고 일컫는 경우가 많다.
+- 한 노드에 자식이 최대 두개까지 있을 수 있다.
+- 그 두 자식은 각각 왼쪽 자식, 오른쪽 자식이라고 부른다.
+
+<code>
+  class Node{
+   private:
+     Node left; //왼쪽 자식
+     Node right; // 오른쪽 자식
+     int value; // 노드의 값
+   public:
+     Node(Node left, Node right, int value){
+        this.left = left;
+        this.right = right;
+        this.value = vaule;
+    }
+    
+    Node getLeft(){return left;}
+    Node getRight(){return right;}
+    int getValue(){return value;}
+  };
+  </code>
