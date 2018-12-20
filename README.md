@@ -38,6 +38,7 @@
 - 그 두 자식은 각각 왼쪽 자식, 오른쪽 자식이라고 부른다.
 
 <code>
+  
   class Node{
    private:
      Node left; //왼쪽 자식
