@@ -23,9 +23,13 @@
 - 0개 이상의 다른 노드에 대한 레퍼런스(또는 포인터)가 들어있는 노드(데이터 원소)로 구성
 - 한 노드를 참조하는 노드는 하나뿐
 - 노드 := 구조체, 클래스로 표현된다
-
+- 루트 : 최상위 노드; 다른 모든 노드로 가는 경로가 반드시 존재해야만 하는 유일한 노드 -> 모든 트리의 시작점은 루트
 <code>
   public class Node{
-  public Node[] children;
+   public Node[] children; //노드가 참조하는 모든 노드를 저장할 배열
   }
-  </code>
+  public class IntNode : Node {
+    public int value;
+  }
+ </code>
+1) 이진트리
