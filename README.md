@@ -58,3 +58,36 @@
   };
   </code>
   </pre>
+#### 2. 이진 검색 트리 (Binary Search Tree)
+- 트리에 데이터를 저장할 때, 흔히 쓰이는 자료구조
+- BST에서는 노드의 왼쪽 자식의 값이 반드시 자신의 값 이하이고 , 오른쪽 자식의 값은 반드시 자신의 값 이상
+         [나]
+        /    \
+[나보다 작음][나보다 큼]  
+-**룩업 연산(look up)트리에 있는 특정노드의 위치를 알아내는 연산을 빠르고 간단하게 처리할 수 있음**
+루트 노드에서 시작 <br>
+현재 노드가 널이 아닌 동안 반복 <br>
+현재 노드의 값이 찾고자 하는 값이면 <br>
+ 현재 노드를 리턴<br>
+현재 노드의 값이 찾고자 하는 값보다 작으면<br>
+ 오른쪽 자식을 현재 노드로 설정 <br>
+현재 노드의 값이 찾고자 하는 값보다 크면 <br>
+ 왼쪽 자식을 현재 노드로 설정 <br>
+ 반복문 끝 <br>
+<pre><code>
+Node findNode(Node root, int value){
+  while(root!=null){ 
+    int currval= root.getValue();
+    if(currval == value) break;
+    if(currval < value ){
+      root = root.getRight();
+    }
+    else{
+      root = root.getLeft();
+    }
+  
+  }
+  return root;
+}
+
+</code></pre>
